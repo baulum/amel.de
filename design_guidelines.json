@@ -1,0 +1,125 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Luxury",
+  "colors": {
+    "background": "#F4F4F0",
+    "foreground": "#111111",
+    "primary": "#E35A35",
+    "primary_foreground": "#FFFFFF",
+    "muted": "#E5E5DF",
+    "muted_foreground": "#666666",
+    "border": "#D2D2CC",
+    "card": "#FFFFFF",
+    "card_foreground": "#111111"
+  },
+  "typography": {
+    "headings": "Cabinet Grotesk, sans-serif",
+    "body": "Satoshi, Inter, sans-serif",
+    "weights": {
+      "headings": "800",
+      "body": "400",
+      "bold": "700"
+    },
+    "rules": [
+      "H1 must be fluid, extremely large (e.g. text-[8vw] md:text-[10vw]) with leading-none and tracking-tighter.",
+      "Headings should NEVER use Inter.",
+      "Use ALL CAPS with wide tracking (tracking-widest) for overlines and labels.",
+      "Use text-balance for large headings to prevent awkward wrapping."
+    ]
+  },
+  "visual_enhancers": {
+    "spacing": "Generous. Use p-12, p-24, py-32 for sections.",
+    "borders": "1px solid #D2D2CC. Use for grid structures.",
+    "corners": "Sharp (rounded-none) or very subtle (rounded-sm) for an architectural feel.",
+    "shadows": "Minimal. Rely on borders and high contrast rather than soft shadows.",
+    "noise": "Add a subtle grain overlay across the site to make it feel tactile."
+  },
+  "layouts": {
+    "hero": "Kinetic Hero. Massive typographic statement with line-by-line reveal (framer-motion). An architectural image offset to one side or within a clipped frame. Subtle parallax on scroll.",
+    "manifesto": "Numbered chapters (01, 02, 03) arranged in an asymmetric grid. Large numbers, clear typography.",
+    "gallery": "Editorial image gallery. Images placed in strict grid cells, some cells empty. Use hover interactions (scale up image within hidden overflow container).",
+    "marquee": "Slow, elegant scrolling text strip acting as a section divider.",
+    "contact": "Split layout. Left: Clean, brutally simple form. Right: Company details (address, phone, email) in large, clear typography."
+  },
+  "motion": {
+    "scrolling": "Lenis for smooth momentum scrolling.",
+    "reveal": "Framer-motion for masking and revealing text line-by-line on load.",
+    "parallax": "Use Framer-motion useScroll and useTransform for subtle image parallax.",
+    "hover": "Images scale slightly on hover. Buttons have sharp background sweeps or inverted colors on hover."
+  },
+  "components_to_use": [
+    "react-fast-marquee",
+    "framer-motion",
+    "lenis (via @studio-freight/react-lenis)",
+    "lucide-react (Icons)",
+    "Shadcn UI (Form, Input, Textarea, Button) - heavily customized for the brutalist/luxury theme."
+  ],
+  "image_urls": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1625585598750-3535fe40efb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBpbnRlcmlvciUyMGVtcHR5JTIwcm9vbXxlbnwwfHx8fDE3ODQzMTYwNzd8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Clean, empty white room representing a fresh start and moving out."
+    },
+    "gallery_1": {
+      "url": "https://images.unsplash.com/photo-1624137527136-66e631bdaa0e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxtb3ZpbmclMjBib3hlc3xlbnwwfHx8fDE3ODQzMTYwNzd8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist cardboard boxes."
+    },
+    "gallery_2": {
+      "url": "https://images.unsplash.com/photo-1695222833131-54ee679ae8e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHw0fHxkZWxpdmVyeSUyMHRydWNrfGVufDB8fHx8MTc4NDMxNjA3N3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Delivery truck on the road."
+    },
+    "cityscape": {
+      "url": "https://images.unsplash.com/photo-1595867818082-083862f3d630?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxtdW5pY2glMjBjaXR5c2NhcGV8ZW58MHx8fHwxNzg0MzE2MDc3fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Munich cityscape."
+    }
+  },
+  "content": {
+    "hero_headline": "WIR BEWEGEN MÜNCHEN.",
+    "hero_subheadline": "Amel's Team GmbH. Professionelle Umzüge, Entrümpelungen und Montage. Über 20 Jahre Erfahrung.",
+    "services": [
+      {
+        "id": "01",
+        "title": "UMZÜGE",
+        "desc": "Nah und fern. Sicher, effizient und stressfrei. Ihr Hab und Gut in besten Händen."
+      },
+      {
+        "id": "02",
+        "title": "ENTRÜMPELUNG",
+        "desc": "Besenreine Räumung von Wohnungen, Kellern und Büros. Diskret und umweltgerecht."
+      },
+      {
+        "id": "03",
+        "title": "MONTAGE",
+        "desc": "Fachgerechter Ab- und Aufbau Ihrer Möbel und Küchen durch erfahrene Profis."
+      }
+    ],
+    "contact": {
+      "name": "Amel's Team GmbH",
+      "email": "Info@amel.de",
+      "phone": "089/87579385",
+      "address": "Ravensburgerring 23, 81243 München"
+    }
+  },
+  "instructions_to_main_agent": [
+    "You MUST write ALL text in German.",
+    "You MUST install lenis, framer-motion, react-fast-marquee, and lucide-react.",
+    "Use a specific Google font like Cabinet Grotesk if available via CDN or replace with `font-sans` if importing another modern sans like Space Grotesk/Syncopate for headings.",
+    "Create a line-by-line text reveal animation for the hero section using framer-motion. Wrap lines in overflow-hidden spans.",
+    "For the image gallery, use clipped frames (e.g. wrapper with overflow-hidden and absolute image with scale animation on hover).",
+    "Build a contact form using HTML/Tailwind or Shadcn. Make it look brutalist/editorial (sharp corners, 1px borders, generous padding). Fields: Name, Email, Telefon, Service (Select), Datum, Nachricht.",
+    "The footer MUST contain the company information prominently: Amel's Team GmbH, Ravensburgerring 23, 81243 München, 089/87579385, Info@amel.de.",
+    "Do NOT use typical generic tech gradients. Stick to solid colors (Bone White, Deep Charcoal, Rust Orange).",
+    "Make the site responsive, ensuring the massive typography scales down properly on mobile (e.g. text-5xl on mobile, text-[10vw] on desktop)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "You MUST NOT apply universal transition. Eg: transition: all. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles (sharp corners or pill, depending on archetype). Here, use sharp.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ]
+}
