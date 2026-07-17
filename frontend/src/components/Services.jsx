@@ -11,7 +11,7 @@ const services = [
       "Privat- & Firmenumzüge",
       "Verpackung inkl. Material",
       "Halteverbotszonen",
-      "Klavier- & Schwerguttransporte",
+      "Kostenlose Besichtigung",
     ],
   },
   {

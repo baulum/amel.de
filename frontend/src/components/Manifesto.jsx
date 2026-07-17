@@ -18,8 +18,8 @@ const chapters = [
   },
   {
     n: "IV",
-    title: "Kein Möbelstück ist zu schwer.",
-    body: "Klavier, Marmortisch, Panzerschrank. Was Sie mitnehmen wollen, tragen wir. Sicher verpackt, sauber transportiert.",
+    title: "Sorgfalt ist Handwerk.",
+    body: "Vom Verpacken bis zum Aufstellen — wir behandeln Ihr Hab und Gut so, als wäre es unser eigenes. Sauber verpackt, sicher transportiert.",
   },
 ];
 

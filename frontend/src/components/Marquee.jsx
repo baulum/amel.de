@@ -6,7 +6,6 @@ const items = [
   "Möbelmontage",
   "Fernumzüge",
   "Büroumzüge",
-  "Klaviertransport",
   "Kartons & Verpackung",
   "Halteverbotszonen",
 ];

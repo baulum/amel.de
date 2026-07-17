@@ -76,7 +76,7 @@ export default function Gallery() {
           <h2 className="font-display text-4xl md:text-6xl leading-[0.95] tracking-tight text-balance">
             Ausschnitte aus dem Alltag —{" "}
             <span className="text-[var(--muted-fg)] italic font-normal">
-              zwischen Karton und Klaviertransport.
+              zwischen Karton und Übergabe.
             </span>
           </h2>
         </div>
