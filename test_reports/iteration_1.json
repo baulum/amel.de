@@ -1,0 +1,26 @@
+{
+  "summary": "Smoke-tested Amel's Team GmbH marketing site (backend + frontend). Backend contact APIs work (create, validation 422, list). Frontend loads all sections, hero headline correct, footer shows full company info, contact form submits and resets with success toast, nav scroll works.",
+  "tested_scope": ["frontend", "backend", "integration"],
+  "passed": [
+    "GET /api/ -> 200 {'message':\"Amel's Team GmbH API\"}",
+    "POST /api/contact valid payload -> 200 with id + created_at",
+    "POST /api/contact invalid email -> 422",
+    "POST /api/contact missing required fields -> 422",
+    "GET /api/contact -> 200 list sorted by created_at desc (newest first)",
+    "Frontend loads at / with home-page testid",
+    "All sections present: hero, marquee, services, manifesto, gallery, process, contact, footer, nav",
+    "Hero headline = 'WIR BEWEGEN MÜNCHEN.' (CSS uppercase of 'Wir bewegen München.')",
+    "Footer displays Amel's Team GmbH, Ravensburgerring 23, 81243, 089 / 87579385, Info@amel.de",
+    "Contact form fills + submits successfully; success toast 'Anfrage gesendet. Wir melden uns innerhalb von 24 Stunden.' shown and form resets",
+    "Nav link nav-leistungen scrolls page to Leistungen section (scrollY=1356)"
+  ],
+  "failed": [],
+  "notes": [
+    "Empty-form submit does NOT trigger JS toast 'Bitte füllen Sie alle Pflichtfelder aus.' because inputs use native HTML5 required attributes; browser blocks submission before JS handler runs. This is standard behavior and still prevents empty submissions. If a custom toast is desired for empty submit, main agent could remove native 'required' and rely on JS validation, but current behavior is acceptable.",
+    "Footer phone rendered as '089 / 87579385' (with spaces around slash) — matches spec 089/87579385."
+  ],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
