@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Clock } from "lucide-react";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -133,6 +133,27 @@ export default function Contact() {
                   Ravensburgerring 23
                   <span className="block text-lg md:text-xl text-[var(--bone)]/80 font-normal">
                     81243 München
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              data-testid="contact-hours"
+              className="flex items-center gap-4"
+            >
+              <Clock
+                size={18}
+                className="text-[var(--rust)] flex-shrink-0"
+              />
+              <div>
+                <div className="mono text-[10px] uppercase tracking-widest text-[var(--bone)]/60">
+                  Öffnungszeiten
+                </div>
+                <div className="font-display text-2xl md:text-3xl">
+                  Mo – Sa
+                  <span className="block text-lg md:text-xl text-[var(--bone)]/80 font-normal">
+                    08:00 – 18:00 Uhr
                   </span>
                 </div>
               </div>

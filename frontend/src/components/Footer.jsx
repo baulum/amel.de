@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 grid grid-cols-12 gap-6 border-t border-[var(--ink)] pt-10">
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 md:col-span-3">
             <div className="mono text-[10px] uppercase tracking-widest text-[var(--muted-fg)] mb-2">
               Firma
             </div>
@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-span-6 md:col-span-3">
+          <div className="col-span-6 md:col-span-2">
             <div className="mono text-[10px] uppercase tracking-widest text-[var(--muted-fg)] mb-2">
               Anschrift
             </div>
@@ -51,6 +51,16 @@ export default function Footer() {
             >
               Info@amel.de
             </a>
+          </div>
+
+          <div className="col-span-12 md:col-span-2">
+            <div className="mono text-[10px] uppercase tracking-widest text-[var(--muted-fg)] mb-2">
+              Öffnungszeiten
+            </div>
+            <div className="text-sm">Mo – Sa</div>
+            <div className="text-sm text-[var(--muted-fg)] mt-1">
+              08:00 – 18:00 Uhr
+            </div>
           </div>
 
           <div className="col-span-12 md:col-span-2">
