@@ -5,13 +5,13 @@ const services = [
   {
     id: "01",
     title: "Umzüge",
-    subtitle: "Nah & Fern",
-    desc: "Von der ersten Kiste bis zum letzten Handgriff. Wir planen, verpacken und transportieren — souverän, versichert und ohne Überraschungen. Innerhalb Münchens oder quer durch Europa.",
+    subtitle: "Nah, Fern & Ausland",
+    desc: "Von der ersten Kiste bis zum letzten Handgriff. Wir planen, verpacken und transportieren — souverän, versichert und ohne Überraschungen. Innerhalb Münchens, deutschlandweit und europaweit ins Ausland.",
     bullets: [
       "Privat- & Firmenumzüge",
-      "Verpackung inkl. Material",
-      "Halteverbotszonen",
-      "Kostenlose Besichtigung",
+      "Auslandsumzüge europaweit",
+      "Profi-Packmaterial inklusive",
+      "Halteverbotszonen & Besichtigung",
     ],
   },
   {
@@ -124,6 +124,56 @@ export default function Services() {
         ))}
         <div className="border-t border-[var(--ink)]" />
       </div>
+
+      {/* Materialien strip */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.8 }}
+        className="mt-20 md:mt-28 grid grid-cols-12 gap-6 border border-[var(--ink)] p-8 md:p-12 bg-[var(--muted)]"
+        data-testid="materials-strip"
+      >
+        <div className="col-span-12 md:col-span-4">
+          <div className="mono text-xs uppercase tracking-widest text-[var(--muted-fg)] mb-3">
+            § Ausstattung
+          </div>
+          <h3 className="font-display text-3xl md:text-4xl leading-tight tracking-tight">
+            Profi-Material.
+            <br />
+            <span className="text-[var(--rust)] italic font-normal">
+              Inklusive.
+            </span>
+          </h3>
+          <p className="mt-4 text-sm text-[var(--ink)]/80 max-w-sm leading-relaxed">
+            Wir bringen alles mit, was Ihr Hab und Gut schützt — kein Baumarkt-Zwischenstopp,
+            keine kaputten Ecken.
+          </p>
+        </div>
+        <div className="col-span-12 md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          {[
+            { k: "01", v: "Packseide" },
+            { k: "02", v: "Luftpolsterfolie" },
+            { k: "03", v: "Stretchfolie" },
+            { k: "04", v: "Matratzenhüllen" },
+            { k: "05", v: "Umzugsdecken" },
+            { k: "06", v: "Umzugskartons" },
+          ].map((m) => (
+            <div
+              key={m.k}
+              className="border-t border-[var(--ink)]/40 pt-3"
+              data-testid={`material-${m.k}`}
+            >
+              <div className="mono text-[10px] uppercase tracking-widest text-[var(--muted-fg)]">
+                {m.k}
+              </div>
+              <div className="font-display text-lg md:text-xl mt-1">
+                {m.v}
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }

@@ -9,6 +9,7 @@ const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const SERVICES = [
   "Wohnungsumzug (nah)",
   "Fernumzug",
+  "Auslandsumzug",
   "Entrümpelung",
   "Möbelmontage",
   "Sonstiges",

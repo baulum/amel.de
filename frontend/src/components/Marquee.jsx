@@ -5,6 +5,7 @@ const items = [
   "Entrümpelungen",
   "Möbelmontage",
   "Fernumzüge",
+  "Auslandsumzüge",
   "Büroumzüge",
   "Kartons & Verpackung",
   "Halteverbotszonen",

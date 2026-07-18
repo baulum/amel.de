@@ -93,8 +93,8 @@ export default function Hero() {
               animate="show"
               className="text-sm md:text-base leading-relaxed text-[var(--ink)]/85 max-w-sm"
             >
-              Seit über zwanzig Jahren. Umzüge, Entrümpelung, Montage — nah
-              und&nbsp;fern. Bayerische Präzision, ehrliches Handwerk.
+              Seit über zwanzig Jahren. Umzüge, Entrümpelung, Montage — nah,
+              fern und&nbsp;europaweit. Bayerische Präzision, ehrliches Handwerk.
             </motion.p>
           </div>
         </div>
