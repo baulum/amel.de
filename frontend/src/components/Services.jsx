@@ -23,7 +23,7 @@ const services = [
       "Wohnungs- & Haushaltsauflösungen",
       "Messiwohnungen",
       "Nachlassauflösungen",
-      "Wertanrechnung möglich",
+      "Umweltgerechte Entsorgung",
     ],
   },
   {
@@ -156,8 +156,9 @@ export default function Services() {
             { k: "02", v: "Luftpolsterfolie" },
             { k: "03", v: "Stretchfolie" },
             { k: "04", v: "Matratzenhüllen" },
-            { k: "05", v: "Umzugsdecken" },
-            { k: "06", v: "Umzugskartons" },
+            { k: "05", v: "Kleiderboxen" },
+            { k: "06", v: "Umzugsdecken" },
+            { k: "07", v: "Umzugskartons" },
           ].map((m) => (
             <div
               key={m.k}
