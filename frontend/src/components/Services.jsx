@@ -33,7 +33,6 @@ const services = [
     desc: "Küchen, Schränke, Betten, Büromöbel. Fachgerechte Demontage am alten und präzise Montage am neuen Ort. Werkzeuge, Erfahrung, ruhige Hand.",
     bullets: [
       "Küchen- & Schrankmontage",
-      "Elektro- & Wasseranschlüsse (Partner)",
       "IKEA & Systemmöbel",
       "Bohrarbeiten inkl.",
     ],
