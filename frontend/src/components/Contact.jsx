@@ -31,6 +31,16 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
+  // Schema for ContactPoint
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    telephone: COMPANY.phoneIntl,
+    contactType: "Customer Service",
+    areaServed: "DE",
+    availableLanguage: ["de", "en"],
+  };
+
   const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
   const submit = async (e) => {

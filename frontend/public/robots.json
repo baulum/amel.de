@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "userAgent": "*",
+      "allow": "/",
+      "disallow": [
+        "/.next/",
+        "/build/",
+        "/node_modules/"
+      ]
+    }
+  ],
+  "sitemap": "https://amels-team.de/sitemap.xml"
+}

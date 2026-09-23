@@ -2,10 +2,11 @@ import LegalPage from "@/components/LegalPage";
 import { COMPANY } from "@/lib/site";
 
 export const metadata = {
-  title: "Datenschutzerklärung",
-  description: `Datenschutzerklärung der ${COMPANY.name}: welche Daten wir verarbeiten, wofür und welche Rechte Sie haben.`,
+  title: "Datenschutzerklärung – Amel's Team GmbH München",
+  description: `Datenschutzerklärung von Amel's Team München: Erfahren Sie, welche Daten wir verarbeiten, wofür und welche Rechte Sie gemäß DSGVO haben.`,
   alternates: { canonical: "/datenschutz/" },
   openGraph: { url: "/datenschutz/" },
+  robots: { index: false, follow: true },
 };
 
 export default function Datenschutz() {

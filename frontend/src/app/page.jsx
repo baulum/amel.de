@@ -18,7 +18,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "MovingCompany",
+      "@type": ["LocalBusiness", "MovingCompany"],
       "@id": `${SITE_URL}/#business`,
       name: COMPANY.name,
       alternateName: COMPANY.brand,
@@ -29,6 +29,8 @@ const jsonLd = {
         "Umzugsunternehmen in München für Privat- und Firmenumzüge, Fern- und Auslandsumzüge, Entrümpelungen und Möbelmontage. Festpreis nach kostenloser Besichtigung.",
       telephone: COMPANY.phoneIntl,
       email: COMPANY.email,
+      priceRange: "€€",
+      foundingDate: "2004",
       address: {
         "@type": "PostalAddress",
         streetAddress: COMPANY.street,
@@ -48,6 +50,7 @@ const jsonLd = {
       areaServed: [
         { "@type": "City", name: "München" },
         { "@type": "State", name: "Bayern" },
+        { "@type": "Country", name: "Deutschland" },
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -68,6 +71,54 @@ const jsonLd = {
       name: COMPANY.brand,
       inLanguage: "de-DE",
       publisher: { "@id": `${SITE_URL}/#business` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${SITE_URL}/?s={search_term_string}`,
+        },
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${SITE_URL}/#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${SITE_URL}/`,
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Wie viel kostet ein Umzug in München?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Die Kosten für einen Umzug hängen von der Größe Ihrer Wohnung, der Entfernung und den erforderlichen Services ab. Wir bieten eine kostenlose Besichtigung an und erstellen einen Festpreis ohne versteckte Gebühren. Rufen Sie uns unter 089 / 87579385 an.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Bietet Amel's Team auch Entrümpelung an?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, wir bieten professionelle Entrümpelung und Haushaltsauflösung an. Wir räumen konsequent, sortieren fachgerecht und entsorgen umweltbewusst. Die Räume werden besenrein übergeben.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Macht Amel's Team auch Möbelmontage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, wir montieren Küchen, Schränke, Betten und Büromöbel fachgerecht. Das beinhaltet Demontage am alten Ort und präzise Montage am neuen Ort, inclusive Bohrarbeiten.",
+          },
+        },
+      ],
     },
   ],
 };

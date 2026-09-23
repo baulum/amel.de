@@ -2,10 +2,11 @@ import LegalPage from "@/components/LegalPage";
 import { COMPANY } from "@/lib/site";
 
 export const metadata = {
-  title: "Impressum",
-  description: `Impressum der ${COMPANY.name}, Umzugsunternehmen in München.`,
+  title: "Impressum – Amel's Team GmbH München",
+  description: `Impressum von Amel's Team, dem Umzugsunternehmen in München. Handelsregisterauszug und Kontaktinformationen.`,
   alternates: { canonical: "/impressum/" },
   openGraph: { url: "/impressum/" },
+  robots: { index: false, follow: true },
 };
 
 export default function Impressum() {

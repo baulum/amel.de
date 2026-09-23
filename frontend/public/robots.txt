@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
+Disallow: /.next/
+Disallow: /build/
+Disallow: /node_modules/
 
 Sitemap: https://amels-team.de/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
