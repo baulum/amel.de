@@ -1,8 +1,12 @@
+"use client";
+
 import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
+import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight, Clock } from "lucide-react";
+import { COMPANY } from "@/lib/site";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -80,7 +84,7 @@ export default function Contact() {
 
           <div className="space-y-6 mt-12">
             <a
-              href="tel:+498987579385"
+              href={COMPANY.phoneHref}
               data-testid="contact-phone"
               className="flex items-center gap-4 group"
             >
@@ -93,13 +97,13 @@ export default function Contact() {
                   Telefon
                 </div>
                 <div className="font-display text-2xl md:text-3xl group-hover:text-[var(--rust)] transition-colors duration-300">
-                  089 / 87579385
+                  {COMPANY.phone}
                 </div>
               </div>
             </a>
 
             <a
-              href="mailto:Info@amel.de"
+              href={`mailto:${COMPANY.email}`}
               data-testid="contact-email"
               className="flex items-center gap-4 group"
             >
@@ -112,7 +116,7 @@ export default function Contact() {
                   E-Mail
                 </div>
                 <div className="font-display text-2xl md:text-3xl group-hover:text-[var(--rust)] transition-colors duration-300">
-                  Info@amel.de
+                  {COMPANY.email}
                 </div>
               </div>
             </a>
@@ -130,9 +134,9 @@ export default function Contact() {
                   Adresse
                 </div>
                 <div className="font-display text-2xl md:text-3xl">
-                  Ravensburgerring 23
+                  {COMPANY.street}
                   <span className="block text-lg md:text-xl text-[var(--bone)]/80 font-normal">
-                    81243 München
+                    {COMPANY.zip} {COMPANY.city}
                   </span>
                 </div>
               </div>
@@ -252,8 +256,12 @@ export default function Contact() {
 
           <div className="mt-10 flex items-center justify-between gap-6 flex-wrap">
             <p className="text-xs text-[var(--bone)]/50 max-w-xs mono">
-              Mit dem Absenden stimmen Sie zu, dass wir Ihre Daten zur
-              Bearbeitung Ihrer Anfrage speichern.
+              Ihre Angaben verwenden wir nur zur Bearbeitung Ihrer Anfrage.
+              Details in der{" "}
+              <Link href="/datenschutz/" className="underline hover:text-[var(--bone)]">
+                Datenschutzerklärung
+              </Link>
+              .
             </p>
 
             <button

@@ -1,5 +1,8 @@
+import Link from "next/link";
+import CurrentYear from "@/components/CurrentYear";
+import { COMPANY } from "@/lib/site";
+
 export default function Footer() {
-  const year = new Date().getFullYear();
   return (
     <footer
       data-testid="site-footer"
@@ -29,9 +32,9 @@ export default function Footer() {
               Anschrift
             </div>
             <div className="text-sm leading-relaxed">
-              Ravensburgerring 23
+              {COMPANY.street}
               <br />
-              81243 München
+              {COMPANY.zip} {COMPANY.city}
             </div>
           </div>
 
@@ -40,16 +43,16 @@ export default function Footer() {
               Kontakt
             </div>
             <a
-              href="tel:+498987579385"
+              href={COMPANY.phoneHref}
               className="text-sm block link-underline"
             >
-              089 / 87579385
+              {COMPANY.phone}
             </a>
             <a
-              href="mailto:Info@amel.de"
+              href={`mailto:${COMPANY.email}`}
               className="text-sm block link-underline mt-1"
             >
-              Info@amel.de
+              {COMPANY.email}
             </a>
           </div>
 
@@ -77,10 +80,16 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs mono uppercase tracking-widest text-[var(--muted-fg)]">
-          <div>© {year} Amel&apos;s Team GmbH — Alle Rechte vorbehalten.</div>
+          <div>
+            © <CurrentYear /> Amel&apos;s Team GmbH — Alle Rechte vorbehalten.
+          </div>
           <div className="flex items-center gap-6">
-            <span className="link-underline cursor-default">Impressum</span>
-            <span className="link-underline cursor-default">Datenschutz</span>
+            <Link href="/impressum/" className="link-underline">
+              Impressum
+            </Link>
+            <Link href="/datenschutz/" className="link-underline">
+              Datenschutz
+            </Link>
             <span>MUC · MADE WITH CARE</span>
           </div>
         </div>

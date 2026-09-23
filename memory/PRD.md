@@ -12,8 +12,10 @@ GmbH seit über 20 Jahren. Sprache: Deutsch. Design: modern & professionell, Aww
   - `POST /api/contact` — persist contact/inspection request
   - `GET /api/contact` — list requests (sorted desc)
   - Legacy: `POST/GET /api/status`
-- **Frontend**: React 19 + CRA/craco, TailwindCSS, framer-motion, lenis, react-fast-marquee, shadcn/ui.
-  - Single-page composition in `/src/pages/Home.jsx`
+- **Frontend**: Next.js 16 (App Router, `output: "export"` → statisches HTML in `frontend/build/`, kein SSR-Server), TailwindCSS, framer-motion, lenis, react-fast-marquee, sonner.
+  - Seiten: `/` , `/impressum/`, `/datenschutz/` (`src/app/…`), Firmendaten zentral in `src/lib/site.js`
+  - Schriften (Fontshare) und Bilder liegen lokal in `public/fonts` und `public/images` – keine Drittanbieter, kein Tracking
+  - Startseite: `src/app/page.jsx`
   - Components: `Nav`, `Hero` (masked line reveal + parallax), `Marquee`, `Services`, `Manifesto`, `Gallery` (per-image parallax), `Process`, `Contact`, `Footer`
   - Global smooth scroll: `SmoothScroll.jsx` (Lenis)
   - Design tokens (Bone / Ink / Rust) live in `index.css`

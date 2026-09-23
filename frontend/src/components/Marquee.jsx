@@ -1,3 +1,5 @@
+"use client";
+
 import FastMarquee from "react-fast-marquee";
 
 const items = [

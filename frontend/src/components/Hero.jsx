@@ -1,9 +1,10 @@
+"use client";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowDown, MapPin } from "lucide-react";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1625585598750-3535fe40efb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBpbnRlcmlvciUyMGVtcHR5JTIwcm9vbXxlbnwwfHx8fDE3ODQzMTYwNzd8MA&ixlib=rb-4.1.0&q=85";
+const HERO_IMG = "/images/hero-wohnung.jpg";
 
 const line = {
   hidden: { y: "110%" },
@@ -67,7 +68,7 @@ export default function Hero() {
               >
                 Wir bewegen
               </motion.span>
-            </span>
+            </span>{" "}
             <span className="line-mask">
               <motion.span
                 custom={1}
@@ -93,8 +94,8 @@ export default function Hero() {
               animate="show"
               className="text-sm md:text-base leading-relaxed text-[var(--ink)]/85 max-w-sm"
             >
-              Seit über zwanzig Jahren. Umzüge, Entrümpelung, Montage — nah,
-              fern und&nbsp;europaweit. Bayerische Präzision, ehrliches Handwerk.
+              Ihr Umzugsunternehmen in München, seit über zwanzig Jahren. Umzüge,
+              Entrümpelung, Montage — nah, fern und&nbsp;europaweit. Bayerische Präzision, ehrliches Handwerk.
             </motion.p>
           </div>
         </div>
@@ -111,7 +112,8 @@ export default function Hero() {
           <div className="relative overflow-hidden aspect-[16/10] border border-[var(--border-c)]">
             <motion.img
               src={HERO_IMG}
-              alt="Modern minimalist interior representing a fresh move"
+              alt="Leere, helle Wohnung nach dem Umzug – bereit für den Neustart"
+              fetchPriority="high"
               style={{ y, scale }}
               className="w-full h-full object-cover"
             />

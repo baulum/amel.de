@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amels-team.de/sitemap.xml

@@ -1,13 +1,15 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#leistungen", label: "Leistungen" },
-  { href: "#manifest", label: "Manifest" },
-  { href: "#galerie", label: "Galerie" },
-  { href: "#ablauf", label: "Ablauf" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/#leistungen", label: "Leistungen" },
+  { href: "/#manifest", label: "Manifest" },
+  { href: "/#galerie", label: "Galerie" },
+  { href: "/#ablauf", label: "Ablauf" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export default function Nav() {
@@ -34,7 +36,7 @@ export default function Nav() {
     >
       <div className="max-w-[1600px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
         <a
-          href="#top"
+          href="/#top"
           data-testid="brand-link"
           className="flex items-center gap-2"
         >
@@ -61,7 +63,7 @@ export default function Nav() {
         </nav>
 
         <a
-          href="#kontakt"
+          href="/#kontakt"
           data-testid="nav-cta"
           className="hidden md:inline-flex items-center gap-2 bg-[var(--ink)] text-[var(--bone)] px-5 py-2.5 text-xs uppercase tracking-widest hover:bg-[var(--rust)] transition-colors duration-300"
         >
@@ -93,7 +95,7 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href="#kontakt"
+              href="/#kontakt"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center gap-2 bg-[var(--ink)] text-[var(--bone)] px-5 py-3 text-xs uppercase tracking-widest w-max"
             >
