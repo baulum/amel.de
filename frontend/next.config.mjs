@@ -6,9 +6,6 @@ const nextConfig = {
   distDir: "build",
   trailingSlash: true,
   images: { unoptimized: true },
-  env: {
-    REACT_APP_BACKEND_URL: process.env.REACT_APP_BACKEND_URL,
-  },
 };
 
 export default nextConfig;
