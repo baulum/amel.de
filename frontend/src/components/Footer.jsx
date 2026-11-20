@@ -42,18 +42,16 @@ export default function Footer() {
             <div className="mono text-[10px] uppercase tracking-widest text-[var(--muted-fg)] mb-2">
               Kontakt
             </div>
-            <a
-              href={COMPANY.phoneHref}
-              className="text-sm block link-underline"
-            >
-              {COMPANY.phone}
-            </a>
-            <a
-              href={`mailto:${COMPANY.email}`}
-              className="text-sm block link-underline mt-1"
-            >
-              {COMPANY.email}
-            </a>
+            <div className="text-sm">
+              <a href={COMPANY.phoneHref} className="link-underline">
+                {COMPANY.phone}
+              </a>
+            </div>
+            <div className="text-sm mt-1">
+              <a href={`mailto:${COMPANY.email}`} className="link-underline">
+                {COMPANY.email}
+              </a>
+            </div>
           </div>
 
           <div className="col-span-12 md:col-span-2">
@@ -90,7 +88,15 @@ export default function Footer() {
             <Link href="/datenschutz/" className="link-underline">
               Datenschutz
             </Link>
-            <span>MUC · MADE WITH CARE</span>
+            <a
+              href="https://pje-systems.de"
+              target="_blank"
+              rel="noopener"
+              data-testid="footer-pje-link"
+              className="link-underline"
+            >
+              Website: PJE Systems
+            </a>
           </div>
         </div>
       </div>
