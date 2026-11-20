@@ -114,6 +114,16 @@ export default function Datenschutz() {
         Ihrer Anfrage. Rechtsgrundlage und Speicherdauer entsprechen Abschnitt 4.
       </p>
 
+      <h2>5a. Kontakt per WhatsApp</h2>
+      <p>
+        Auf dieser Website befindet sich ein Link, der WhatsApp auf Ihrem Gerät
+        öffnet. Beim Aufruf der Seite werden dafür keine Daten an WhatsApp
+        übertragen; erst wenn Sie den Link anklicken und uns eine Nachricht senden,
+        verarbeitet WhatsApp (WhatsApp Ireland Limited bzw. Meta) Ihre Daten nach
+        eigenen Datenschutzbestimmungen. Wir verarbeiten Ihre Nachricht zur
+        Bearbeitung Ihrer Anfrage (Rechtsgrundlage Abschnitt 4).
+      </p>
+
       <h2>6. SSL- bzw. TLS-Verschlüsselung</h2>
       <p>
         Diese Website nutzt aus Sicherheitsgründen eine SSL- bzw.

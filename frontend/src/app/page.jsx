@@ -7,6 +7,7 @@ import Gallery from "@/components/Gallery";
 import Process from "@/components/Process";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { SITE_URL, COMPANY } from "@/lib/site";
 
 export const metadata = {
@@ -142,6 +143,7 @@ export default function Home() {
       <Process />
       <Contact />
       <Footer />
+      <WhatsAppCTA />
     </main>
   );
 }

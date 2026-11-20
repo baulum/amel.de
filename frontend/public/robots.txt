@@ -4,7 +4,7 @@ Disallow: /.next/
 Disallow: /build/
 Disallow: /node_modules/
 
-Sitemap: https://amels-team.de/sitemap.xml
+Sitemap: https://www.amel.de/sitemap.xml
 
 # Google specific
 User-agent: Googlebot

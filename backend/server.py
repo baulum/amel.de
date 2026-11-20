@@ -156,7 +156,7 @@ def _build_contact_email_html(name: str, email: str, phone: str, service: str,
         'style="background:#ffffff;border:1px solid #d2d2cc">'
         '<tr><td style="padding:24px 24px 0 24px">'
         '<div style="font-family:Arial,sans-serif;font-size:11px;letter-spacing:2px;'
-        'text-transform:uppercase;color:#666">Neue Anfrage · amels-team.de</div>'
+        'text-transform:uppercase;color:#666">Neue Anfrage · amel.de</div>'
         '<h1 style="font-family:Arial,sans-serif;font-size:24px;margin:8px 0 0 0;'
         f'color:#111">Neue Kontaktanfrage von {escape(name)}</h1>'
         '</td></tr>'
